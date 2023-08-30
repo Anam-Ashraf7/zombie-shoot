@@ -16,7 +16,7 @@ backgroundMusic.play()
 backgroundMusic.loop = true
 
 // Iteration 1.4: Add lives
-let lives = 3
+let lives = 4
 let zombie;
 
 // Iteration 2: Write a function to make a zombie
@@ -41,16 +41,14 @@ function generateZombies() {
 
 // Iteration 3: Write a function to check if the player missed a zombie
 function zombieEscaped(zombie){
-    console.log("zombie escaped",zombie.getBoundingClientRect().top)
-
     if (zombie.getBoundingClientRect().top<=0){
         lives--
+        const maxLivesElement = document.getElementById("max-lives");
+        maxLivesElement.style.width = lives*25+"%";
         destroyZombie(zombie)
-        console.log("zombie")
         if(lives == 0) {
             location.href="game-over.html"
         }
-        return lives;
     }
 }
 
@@ -82,8 +80,6 @@ generateZombies()
 function generateUniqueNums(min,max) {
     return Math.floor(Math.random()*(max-min))+min
 }
-
-
 
 setInterval(check,100)
 function check() {
