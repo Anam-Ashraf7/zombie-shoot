@@ -21,7 +21,7 @@ body {
 .game {
     background-image: url("./assets/zombie-shoot-game-background.png");
     background-size: 100% 100%;
-    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
+    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16,crosshair;
     height: 100vh;
     width: 100vw;
 }
